@@ -1,0 +1,60 @@
+<html>
+    <body>
+        <%- include('./nav'); -%>
+
+<center><h1>gETTING DATA FROM DATABASE</h1></center><hr>
+<br><br><br>
+<div class="row">
+    <div class="col-md-3">
+        <button class="btn btn-success"><a href="/insData" style="color:aliceblue; font-size:30px"><i class="fa-solid fa-user-plus"></i></a></button>
+
+    </div>
+    <div class="col-md-6">
+        
+    <form >
+        <table class="table">
+            <tr>
+        <td>
+
+       
+        </td>
+                <td><input type="text" name="i" class="form-control" placeholder="Search Name " ></td>
+       <td> <button type="submit" class="btn btn-success" name="submit" value="submit"><a href="/search" style="color:aliceblue; font-size:20px"><i class="fa-solid fa-magnifying-glass"></i></a></button>
+       </td>
+       </tr>
+       </table>
+    </form>
+        <br><br>
+        
+        <table class="table table-bordered table-striped table-hover table-dark">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Course</td>
+                <td>school</td>
+                <td>Action</td>
+
+            </tr>
+
+<% data.forEach(row=>{
+%>
+<tr>
+  <td><%=row.id%></td>
+    <td><%=row.name%></td>
+        <td><%=row.course%></td>
+        <td><%=row.school%></td>
+   <td>
+        <button class="btn btn-success"><a href="/delData?delid=<%=row.id%>" style="color:aliceblue; font-size:30px"><i class="fa-solid fa-user-minus"></i></a></button>
+       &emsp;
+       <button class="btn btn-success"><a href="/upData?upid=<%=row.id%>" style="color:aliceblue; font-size:30px"><i class="fa-solid fa-user-pen"></i></a></button>
+    
+      
+    </td>
+    </tr>
+<%
+})%>
+        </table>
+    </div>
+</div>
+    </body>
+    </html>

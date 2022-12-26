@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <%- include('./nav'); -%>
+
+<center><h1>This is Curse Page</h1></center><hr>
+<br><br><br>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <table class="table table-bordered table-striped table-hover table-dark">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Course</td>
+
+            </tr>
+
+<% data.forEach(row=>{
+%>
+<tr>
+  <td><%=row.id%></td>
+    <td><%=row.name%></td>
+        <td><%=row.course%></td>
+  
+</tr>
+<%
+})%>
+    </body>
+    </html>

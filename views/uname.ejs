@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-3">
+    
+        </div>
+        <div class="col-md-6">
+    
+        <table class="table table-bordered table-striped table-hover table-dark">
+            <tr>
+               
+                <td>UserName</td>
+                <td>Email</td>
+                <td>Phone number</td>
+               
+    
+            </tr>
+    
+                    <% data.forEach(row=>{
+                    %>
+            <tr>
+                <td><%=row.uname%></td>
+                <td><%=row.email%></td>
+                <td><%=row.phone%></td>
+    
+    
+             </tr>
+    
+                 <%
+                  })%>
+    
+        </table>
+    </div>
+    </div>
+</body>
+</html>
